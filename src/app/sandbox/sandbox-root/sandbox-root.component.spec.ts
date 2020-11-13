@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SandboxRootComponent } from './sandbox-root.component';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -7,7 +7,7 @@ describe('SandboxRootComponent', () => {
   let component: SandboxRootComponent;
   let fixture: ComponentFixture<SandboxRootComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [SandboxRootComponent],
       imports: [RouterTestingModule]
