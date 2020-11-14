@@ -8,7 +8,7 @@ export interface IAuthState {
 
 export const authInitialState: IAuthState = {
   isLoggedIn: false,
-  user: undefined
+  user: undefined,
 };
 
 export function authReducer(state = authInitialState, action: AuthActions): IAuthState {
@@ -16,13 +16,13 @@ export function authReducer(state = authInitialState, action: AuthActions): IAut
     case AuthActionTypes.LoginAction: {
       return {
         isLoggedIn: true,
-        user: action.payload.user
+        user: action.payload.user,
       };
     }
     case AuthActionTypes.LogoutAction: {
       return {
         isLoggedIn: false,
-        user: undefined
+        user: undefined,
       };
     }
     default:

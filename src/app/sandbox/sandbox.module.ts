@@ -15,7 +15,7 @@ import { SandboxComponent } from './sandbox-root/sandbox/sandbox.component';
     SharedModule,
     SandboxRoutingModule,
     MatToolbarModule,
-    StoreModule.forFeature('sandboxState', fromSandbox.sandboxReducer)
-  ]
+    StoreModule.forFeature('sandboxState', fromSandbox.sandboxReducer),
+  ],
 })
 export class SandboxModule {}

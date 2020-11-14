@@ -8,17 +8,19 @@ describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [LoginComponent],
-      imports: [HttpClientTestingModule],
-      providers: [
-        provideMockStore({
-          selectors: []
-        })
-      ]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [LoginComponent],
+        imports: [HttpClientTestingModule],
+        providers: [
+          provideMockStore({
+            selectors: [],
+          }),
+        ],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(LoginComponent);

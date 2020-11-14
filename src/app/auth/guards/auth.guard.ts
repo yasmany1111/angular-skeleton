@@ -8,7 +8,7 @@ import {
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
   UrlTree,
-  Router
+  Router,
 } from '@angular/router';
 import { Observable } from 'rxjs';
 import { select, Store } from '@ngrx/store';
@@ -17,7 +17,7 @@ import { IAppState } from '../../core/store-app/reducers';
 import { isLoggedIn } from '../store-auth/selectors/auth.selectors';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
   constructor(private store: Store<IAppState>, private router: Router) {}

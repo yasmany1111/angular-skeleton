@@ -6,11 +6,13 @@ describe('SandboxComponent', () => {
   let component: SandboxComponent;
   let fixture: ComponentFixture<SandboxComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [SandboxComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SandboxComponent],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SandboxComponent);

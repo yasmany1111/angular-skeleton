@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { IUser } from '../models';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   constructor(private http: HttpClient) {}

@@ -4,21 +4,26 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 const appRoutes: Routes = [
   {
     path: 'sandbox',
-    loadChildren: () => import('./sandbox/sandbox.module').then((m) => m.SandboxModule)
+    loadChildren: () => import('./sandbox/sandbox.module').then((m) => m.SandboxModule),
   },
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule)
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
   {
     path: '',
     redirectTo: 'sandbox',
-    pathMatch: 'full'
-  }
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules, relativeLinkResolution: 'legacy' })],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(appRoutes, {
+      preloadingStrategy: PreloadAllModules,
+      relativeLinkResolution: 'legacy',
+    }),
+  ],
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

@@ -7,12 +7,14 @@ describe('SandboxRootComponent', () => {
   let component: SandboxRootComponent;
   let fixture: ComponentFixture<SandboxRootComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [SandboxRootComponent],
-      imports: [RouterTestingModule]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SandboxRootComponent],
+        imports: [RouterTestingModule],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SandboxRootComponent);

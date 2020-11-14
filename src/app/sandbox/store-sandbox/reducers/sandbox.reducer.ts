@@ -9,15 +9,15 @@ export const sandboxInitialState: ISandboxState = {
   isSandboxActivated: false,
   sandboxData: [
     {
-      data: 'test1'
+      data: 'test1',
     },
     {
-      data: 'test2'
+      data: 'test2',
     },
     {
-      data: 'test3'
-    }
-  ]
+      data: 'test3',
+    },
+  ],
 };
 
 export function sandboxReducer(state = sandboxInitialState, action: SandboxActions): ISandboxState {
@@ -25,12 +25,12 @@ export function sandboxReducer(state = sandboxInitialState, action: SandboxActio
     case SandboxActionTypes.SandboxActivated: {
       return {
         ...state,
-        isSandboxActivated: action.payload.isActive
+        isSandboxActivated: action.payload.isActive,
       };
     }
     case SandboxActionTypes.UpdateSandboxDataSet1: {
       return {
-        ...state
+        ...state,
       };
     }
     default:

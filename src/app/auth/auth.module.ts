@@ -13,7 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     AuthRoutingModule,
     StoreModule.forFeature('authState', fromAuthState.authReducer),
-    MatButtonModule
-  ]
+    MatButtonModule,
+  ],
 })
 export class AuthModule {}

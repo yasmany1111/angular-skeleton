@@ -9,7 +9,7 @@ import { IAppState } from '../../core/store-app/reducers';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnDestroy {
   private destroy$: Subject<void> = new Subject();

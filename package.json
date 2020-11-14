@@ -2,9 +2,7 @@
   "name": "angular-skeleton",
   "version": "0.0.1",
   "scripts": {
-    "update:packages": "node scripts/wipe-dependencies.js && rm -rf node_modules && npm update --save-dev && npm update --save",
-    "ng": "ng",
-    "start": "ng serve --port 4001",
+    "start": "ng serve",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
     "test": "ng test",
     "e2e": "ng e2e",
@@ -16,7 +14,9 @@
     "prettier:format-all": "prettier --config .prettierrc --write 'src/{app,environments,assets}/**/*{.ts,.js,.json,.html}'",
     "analyze-bundle": "ng build --stats-json && webpack-bundle-analyzer dist/angular-skeleton/stats-es2015.json",
     "build:dev": "rimraf dist && ng build",
-    "build": "rimraf dist && ng build --prod"
+    "build": "rimraf dist && ng build --prod",
+    "script:update-packages": "node scripts/wipe-dependencies.js && rm -rf node_modules && npm update --save-dev && npm update --save",
+    "script:toggle-hidden": "node scripts/toggle-hidden.js"
   },
   "private": true,
   "dependencies": {

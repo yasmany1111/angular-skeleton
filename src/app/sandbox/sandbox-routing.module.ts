@@ -12,14 +12,14 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: SandboxComponent
-      }
-    ]
-  }
+        component: SandboxComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class SandboxRoutingModule {}

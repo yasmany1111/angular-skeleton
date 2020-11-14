@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
 @Component({
   selector: 'app-sandbox-root',
   templateUrl: './sandbox-root.component.html',
-  styleUrls: ['./sandbox-root.component.scss']
+  styleUrls: ['./sandbox-root.component.scss'],
 })
 export class SandboxRootComponent implements OnInit, OnDestroy {
   private destroy$: Subject<void> = new Subject<void>();

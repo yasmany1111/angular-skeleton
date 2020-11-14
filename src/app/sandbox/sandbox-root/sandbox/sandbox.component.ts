@@ -9,7 +9,7 @@ import { Subject } from 'rxjs';
 @Component({
   selector: 'app-sandbox',
   templateUrl: './sandbox.component.html',
-  styleUrls: ['./sandbox.component.scss']
+  styleUrls: ['./sandbox.component.scss'],
 })
 export class SandboxComponent implements OnInit, OnDestroy {
   public isActivated = false;

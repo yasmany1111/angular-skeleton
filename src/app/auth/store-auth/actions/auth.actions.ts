@@ -3,7 +3,7 @@ import { IUser } from '../../models';
 
 export enum AuthActionTypes {
   LoginAction = '[Auth] Login',
-  LogoutAction = '[Auth] Logout'
+  LogoutAction = '[Auth] Logout',
 }
 
 export class LoginAction implements Action {
