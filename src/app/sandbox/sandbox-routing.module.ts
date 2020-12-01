@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 // Components
 import { SandboxRootComponent } from './sandbox-root/sandbox-root.component';
-import { SandboxComponent } from './sandbox-root/sandbox/sandbox.component';
+import { SandboxComponent } from './sandbox/sandbox.component';
 
 const routes: Routes = [
   {

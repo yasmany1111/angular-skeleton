@@ -1,18 +1,6 @@
-import { Action } from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
 
-export enum SandboxActionTypes {
-  SandboxActivated = '[Sandbox] Sandbox activated',
-  UpdateSandboxDataSet1 = '[Sandbox] Update a sandbox dataset position 1',
-}
-
-export class SandboxActivated implements Action {
-  public readonly type = SandboxActionTypes.SandboxActivated;
-  constructor(public payload: { isActive: boolean }) {}
-}
-
-export class UpdateSandboxDataSet1 implements Action {
-  public readonly type = SandboxActionTypes.UpdateSandboxDataSet1;
-  constructor(public payload: { data: 'test5' }) {}
-}
-
-export type SandboxActions = SandboxActivated | UpdateSandboxDataSet1;
+export const SetValuesInStore = createAction(
+  '[Filters] Set the value in the store',
+  props<{ valuesInStore: string[] }>()
+);

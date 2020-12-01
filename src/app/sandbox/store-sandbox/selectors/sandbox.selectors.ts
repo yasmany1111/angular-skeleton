@@ -3,16 +3,9 @@ import { ISandboxState } from '../reducers/sandbox.reducer';
 
 export const selectSandboxState = createFeatureSelector<ISandboxState>('sandboxState');
 
-export const selectIsSandboxActive = createSelector(
+export const selectValuesInStore = createSelector(
   selectSandboxState,
   (sandboxState: ISandboxState) => {
-    return sandboxState.isSandboxActivated;
-  }
-);
-
-export const selectSandboxData = createSelector(
-  selectSandboxState,
-  (sandboxState: ISandboxState) => {
-    return sandboxState.sandboxData;
+    return sandboxState.values;
   }
 );

@@ -1,39 +1,20 @@
-import { SandboxActions, SandboxActionTypes } from '../actions/sandbox.actions';
+import * as SandBoxActionTypes from '../actions/sandbox.actions';
+import { on, createReducer } from '@ngrx/store';
+
+export const filtersStateFeatureKey = 'filtersState';
 
 export interface ISandboxState {
-  isSandboxActivated: boolean;
-  sandboxData: any[];
+  values: string[];
 }
 
-export const sandboxInitialState: ISandboxState = {
-  isSandboxActivated: false,
-  sandboxData: [
-    {
-      data: 'test1',
-    },
-    {
-      data: 'test2',
-    },
-    {
-      data: 'test3',
-    },
-  ],
+export const filtersInitialState: ISandboxState = {
+  // Values
+  values: [],
 };
 
-export function sandboxReducer(state = sandboxInitialState, action: SandboxActions): ISandboxState {
-  switch (action.type) {
-    case SandboxActionTypes.SandboxActivated: {
-      return {
-        ...state,
-        isSandboxActivated: action.payload.isActive,
-      };
-    }
-    case SandboxActionTypes.UpdateSandboxDataSet1: {
-      return {
-        ...state,
-      };
-    }
-    default:
-      return state;
-  }
-}
+export const sandboxReducer = createReducer(
+  filtersInitialState,
+  on(SandBoxActionTypes.SetValuesInStore, (state, action) => {
+    return { ...state, values: action.valuesInStore };
+  })
+);

@@ -7,7 +7,7 @@ import * as fromSandbox from './store-sandbox/reducers/sandbox.reducer';
 
 // Components
 import { SandboxRootComponent } from './sandbox-root/sandbox-root.component';
-import { SandboxComponent } from './sandbox-root/sandbox/sandbox.component';
+import { SandboxComponent } from './sandbox/sandbox.component';
 
 @NgModule({
   declarations: [SandboxRootComponent, SandboxComponent],
