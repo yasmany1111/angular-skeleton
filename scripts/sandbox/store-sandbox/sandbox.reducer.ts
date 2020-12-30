@@ -1,4 +1,4 @@
-import * as SandBoxActionTypes from '../actions/sandbox.actions';
+import * as SandBoxActionTypes from './sandbox.actions';
 import { on, createReducer } from '@ngrx/store';
 
 export const filtersStateFeatureKey = 'filtersState';

@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { ISandboxState } from '../reducers/sandbox.reducer';
+import { ISandboxState } from './sandbox.reducer';
 
 export const selectSandboxState = createFeatureSelector<ISandboxState>('sandboxState');
 
